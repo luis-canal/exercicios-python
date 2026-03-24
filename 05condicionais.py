@@ -22,19 +22,32 @@
 #     print("Acesso negado!")
 
 #03 - Cálculo de desconto progressivo
-valor_carrinho = input("Valor do carrinho: ")
-valor_carrinho = float(valor_carrinho.replace("R$", "").replace(".", "").replace(",", "."))
-if valor_carrinho >= 500:
-    desconto = valor_carrinho * 0.15
-    valor_carrinho = valor_carrinho - desconto
-    print(f"Desconto: R${desconto:,.2f}")
-    print(f"Valor do carrinho: R${valor_carrinho:,.2f}")
-elif valor_carrinho >= 200:
-    desconto = valor_carrinho * 0.10
-    valor_carrinho = valor_carrinho - desconto
-    print(f"Desconto: R${desconto:,.2f}")
-    print(f"Valor do carrinho: R${valor_carrinho:,.2f}")
+# valor_carrinho = input("Valor do carrinho: ")
+# valor_carrinho = float(valor_carrinho.replace("R$", "").replace(".", "").replace(",", "."))
+# if valor_carrinho >= 500:
+#     desconto = valor_carrinho * 0.15
+#     valor_carrinho = valor_carrinho - desconto
+#     print(f"Desconto: R${desconto:,.2f}")
+#     print(f"Valor do carrinho: R${valor_carrinho:,.2f}")
+# elif valor_carrinho >= 200:
+#     desconto = valor_carrinho * 0.10
+#     valor_carrinho = valor_carrinho - desconto
+#     print(f"Desconto: R${desconto:,.2f}")
+#     print(f"Valor do carrinho: R${valor_carrinho:,.2f}")
+# else:
+#     desconto = 0
+#     print(f"Desconto: R${desconto:,.2f}")
+#     print(f"Valor do carrinho: R${valor_carrinho:,.2f}")
+
+#04 - Análise de metas combinadas 
+meta_vendedor = float(input("Meta vendedor: "))
+vendas_vendedor = float(input("Vendas do vendedor: "))
+meta_loja = float(input("Meta loja: "))
+vendas_loja = float(input("Vendas da loja: "))
+
+if vendas_loja > meta_loja and vendas_vendedor > meta_vendedor:
+    bonus = vendas_vendedor * 0.2
 else:
-    desconto = 0
-    print(f"Desconto: R${desconto:,.2f}")
-    print(f"Valor do carrinho: R${valor_carrinho:,.2f}")
+    bonus = 0
+
+print(f"Seu bônus é R${bonus:,.2f}")
