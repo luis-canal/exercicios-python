@@ -15,13 +15,22 @@
 #     print("Produto não encontrado")
 
 #03 - Análise de faturamento por região
-vendas_regiao = {"Norte": 1500,
-                 "Sul": 4600,
-                 "Leste": 1300,
-                 "Oeste": 5500,}
-lista_vendas = list(vendas_regiao.values())
-total_valor = sum(lista_vendas)
-total_regioes = len(lista_vendas)
-media = total_valor / total_regioes
-print("Valor total de vendas: ", total_valor)
-print("Média de vendas entre as regiões: ", media)
+# vendas_regiao = {"Norte": 1500,
+#                  "Sul": 4600,
+#                  "Leste": 1300,
+#                  "Oeste": 5500,}
+# lista_vendas = list(vendas_regiao.values())
+# total_valor = sum(lista_vendas)
+# total_regioes = len(lista_vendas)
+# media = total_valor / total_regioes
+# print("Valor total de vendas: ", total_valor)
+# print("Média de vendas entre as regiões: ", media)
+
+#04 - Avaliação de desempenho
+desempenho = {"Gui": [7, 8, 9], "Kaili": [5, 9, 7], "Tiago": [6, 7, 8]}
+nome = input("Digite um nome: ")
+nota_nome = desempenho[nome]
+print(f"\n =={nome}==")
+print("Notas: ", nota_nome)
+media = sum(nota_nome) / len(nota_nome)
+print("Média: ", media)
