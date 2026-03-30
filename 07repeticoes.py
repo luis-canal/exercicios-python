@@ -21,9 +21,27 @@
 # print("Comissão total: ", comissao_total)
 
 #03 - Verificação de estoque crítico
-estoque = ["monitor", "mouse", "teclado", "gabinete", "processador"]
-quantidade = [10, 35, 4, 20, 7]
-for i in quantidade: 
-    if i < 8:
-        posicao = quantidade.index(i)
-        print(f"ALERTA: o produto {estoque[posicao]} está com apenas {i} itens")
+# estoque = ["monitor", "mouse", "teclado", "gabinete", "processador"]
+# quantidade = [10, 35, 4, 20, 7]
+# for i in quantidade: 
+#     if i < 8:
+#         posicao = quantidade.index(i)
+#         print(f"ALERTA: o produto {estoque[posicao]} está com apenas {i} itens")
+
+#04 - Análise de custos mensais - setor financeiro
+metas = {
+    "jan": 1000,
+    "fev": 1500,
+    "mar": 2000
+}
+gastos = {
+    "jan": 859,
+    "fev": 1576,
+    "mar": 3190
+}
+for mes in gastos:
+    if gastos[mes] > metas[mes]:
+        diferenca = gastos[mes] - metas[mes]
+        print(f"Mês {mes}: orçamento estourado em {diferenca} reais.")
+    else:
+        print(f"Mês {mes}: dentro do orçamento!!")
