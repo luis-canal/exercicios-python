@@ -29,19 +29,29 @@
 #         print(f"ALERTA: o produto {estoque[posicao]} está com apenas {i} itens")
 
 #04 - Análise de custos mensais - setor financeiro
-metas = {
-    "jan": 1000,
-    "fev": 1500,
-    "mar": 2000
-}
-gastos = {
-    "jan": 859,
-    "fev": 1576,
-    "mar": 3190
-}
-for mes in gastos:
-    if gastos[mes] > metas[mes]:
-        diferenca = gastos[mes] - metas[mes]
-        print(f"Mês {mes}: orçamento estourado em {diferenca} reais.")
-    else:
-        print(f"Mês {mes}: dentro do orçamento!!")
+# metas = {
+#     "jan": 1000,
+#     "fev": 1500,
+#     "mar": 2000
+# }
+# gastos = {
+#     "jan": 859,
+#     "fev": 1576,
+#     "mar": 3190
+# }
+# for mes in gastos:
+#     if gastos[mes] > metas[mes]:
+#         diferenca = gastos[mes] - metas[mes]
+#         print(f"Mês {mes}: orçamento estourado em {diferenca} reais.")
+#     else:
+#         print(f"Mês {mes}: dentro do orçamento!!")
+
+#05 - Reajuste geral dos preços - setor comercial
+precos = {"celular": 1500, "tablet": 1000, "notebook": 1250}
+percentual = input("insira o percentual de reajuste: ")
+percentual = percentual.replace("%", "")
+percentual = float(percentual) / 100 + 1
+for i in precos:
+    precos[i] = precos[i] * percentual
+
+print(precos)
