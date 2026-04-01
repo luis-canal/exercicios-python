@@ -20,13 +20,24 @@
 # calcular_iss(2000)
 
 #03 - Analisador de margem de lucro - setor financeiro
-def analisar_margem(fat, custo):
-    lucro = fat - custo
-    margem = lucro / fat
-    if margem >= 0.3:
-        print("Margem saudável")
-    else:
-        print("Margem baixa")
+# def analisar_margem(fat, custo):
+#     lucro = fat - custo
+#     margem = lucro / fat
+#     if margem >= 0.3:
+#         print("Margem saudável")
+#     else:
+#         print("Margem baixa")
 
-analisar_margem(10000, 6000)
+# analisar_margem(10000, 6000)
 
+#04 - Verificador de meta de vendedores - setor comercial
+dic_vendedores = {"João": 12000, "Maria": 8000, "José": 10000}
+meta = 10000
+def bateu_meta(vendas_vendedores: dict, meta: float):
+    for vendedor in vendas_vendedores:
+        if vendas_vendedores[vendedor] >= meta:
+            print(f"Vendedor {vendedor} bateu a meta!")
+        else:
+            print(f"Vendedor {vendedor} NÃO bateu a meta!")
+
+bateu_meta(dic_vendedores, meta)
