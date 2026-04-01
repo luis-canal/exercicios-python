@@ -31,13 +31,28 @@
 # analisar_margem(10000, 6000)
 
 #04 - Verificador de meta de vendedores - setor comercial
-dic_vendedores = {"João": 12000, "Maria": 8000, "José": 10000}
-meta = 10000
-def bateu_meta(vendas_vendedores: dict, meta: float):
-    for vendedor in vendas_vendedores:
-        if vendas_vendedores[vendedor] >= meta:
-            print(f"Vendedor {vendedor} bateu a meta!")
-        else:
-            print(f"Vendedor {vendedor} NÃO bateu a meta!")
+# dic_vendedores = {"João": 12000, "Maria": 8000, "José": 10000}
+# meta = 10000
+# def bateu_meta(vendas_vendedores: dict, meta: float):
+#     for vendedor in vendas_vendedores:
+#         if vendas_vendedores[vendedor] >= meta:
+#             print(f"Vendedor {vendedor} bateu a meta!")
+#         else:
+#             print(f"Vendedor {vendedor} NÃO bateu a meta!")
 
-bateu_meta(dic_vendedores, meta)
+# bateu_meta(dic_vendedores, meta)
+
+#05 - Conversor de moeda interativo - setor de importação
+def converter_real(valor_dolares, cotacao_dolar):
+    valor_em_real = valor_dolares * cotacao_dolar
+    return valor_em_real
+
+precos_usd = [100, 50, 250]
+precos_real = []
+def processar_precos(precos: list, cotacao):
+    for i in precos:
+        valor = converter_real(i, cotacao)
+        precos_real.append(valor)
+    print(precos_real)
+
+processar_precos(precos_usd, 5.20)
