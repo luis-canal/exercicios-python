@@ -22,16 +22,26 @@
 #     print(f"Produto: {produto} | Preço: {preco} | Quantidade: {qtde} | Total: {preco * qtde}")
 
 #04 - Processamento de vendas regionais - setor de dashboard
-dados_filias = {"Matriz": [10000, 20000, 15000],
-                "Filial Norte": [7000, 3000, 19000],
-                "Filial Sul": [13000, 20000],}
+# dados_filias = {"Matriz": [10000, 20000, 15000],
+#                 "Filial Norte": [7000, 3000, 19000],
+#                 "Filial Sul": [13000, 20000],}
 
-def analisar_vendas(lista_vendas):
-    total_vendas = sum(lista_vendas)
-    media_vendas = total_vendas / len(lista_vendas)
-    return total_vendas, media_vendas
+# def analisar_vendas(lista_vendas):
+#     total_vendas = sum(lista_vendas)
+#     media_vendas = total_vendas / len(lista_vendas)
+#     return total_vendas, media_vendas
 
-for f in dados_filias:
-    vendas_filial = dados_filias[f]
-    total_vendas_filial, media_vendas_filial = analisar_vendas(vendas_filial)
-    print(f"Filial -> {f}: Total de vendas: {total_vendas_filial} | Media de vendas: {media_vendas_filial}")
+# for f in dados_filias:
+#     vendas_filial = dados_filias[f]
+#     total_vendas_filial, media_vendas_filial = analisar_vendas(vendas_filial)
+#     print(f"Filial -> {f}: Total de vendas: {total_vendas_filial} | Media de vendas: {media_vendas_filial}")
+
+#05 - Gestão de chamados de suporte - setor de TI
+def resumo_chamados(lista_tempos):
+    quantidade_chamados = len(lista_tempos)
+    max_tempo_espera = max(lista_tempos)
+    return quantidade_chamados, max_tempo_espera
+
+tempos = [14, 82, 38, 170, 179, 27, 39]
+quantidade_chamados, max_tempo_espera = resumo_chamados(tempos)
+print(f"Quantidade de chamados: {quantidade_chamados} | Tempo máximo de espera: {max_tempo_espera}")
