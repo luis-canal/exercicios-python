@@ -1,5 +1,4 @@
 #01 - Cálculo de bônus de vendas
-
 fat = 50000
 perc_bonus = 0.1
 bonus_total = fat * perc_bonus
@@ -8,7 +7,6 @@ print(f"Faturamento liquido: R${fat_liquido:.2f}")
 print(f"Bonus Total: R${bonus_total:.2f}")
 
 #02 - Controle de estoque
-
 estoque = 250
 vendas = 78
 reposicao = 100
